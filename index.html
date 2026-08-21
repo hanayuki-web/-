@@ -28,7 +28,7 @@
     </script>
     <style>
         body { background-color: #F5F0E8; color: #2B2B2B; line-height: 2.0; }
-        .vertical-text { writing-mode: vertical-rl; }
+        .iframe-container iframe { width: 100%; max-width: 700px; height: 520px; border: none; }
     </style>
 </head>
 <body class="font-serif antialiased selection:bg-ato-green selection:text-ato-ecru">
@@ -40,7 +40,7 @@
                 米こや 華雪 <span class="text-xs font-sans font-normal text-ato-gold ml-2">阿東・嘉年</span>
             </div>
             <a href="#preorder" class="bg-ato-green hover:bg-opacity-90 text-ato-ecru text-xs tracking-wider font-sans px-5 py-2.5 transition duration-300">
-                先行登録・仮注文へ
+                各種フォームへ
             </a>
         </div>
     </header>
@@ -58,15 +58,18 @@
             </h1>
             <div class="w-12 h-[1px] bg-ato-gold mx-auto"></div>
             <p class="text-ato-black font-sans text-sm md:text-base leading-loose max-w-2xl mx-auto">
-                標高300〜600mの深い盆地、阿東・嘉年（かね）[span_1](start_span)[span_1](end_span)。<br>
-                十種ヶ峰がもたらす清らかな雪解け水と、阿武川源流の豊かな恵み[span_2](start_span)[span_2](end_span)。<br>
-                昼夜の激しい寒暖差が、極上のコシヒカリを育て上げました[span_3](start_span)[span_3](end_span)。<br>
+                標高300〜600mの深い盆地、阿東・嘉年（かね）。<br>
+                十種ヶ峰がもたらす清らかな雪解け水と、阿武川源流の豊かな恵み。<br>
+                昼夜の激しい寒暖差が、極上のコシヒカリを育て上げました。<br>
                 価格競争に加わらず、土地の物語と生産者の手仕事をそのままに届ける。<br>
-                創業期を迎えた今、限られた数量のみ、先行登録と仮注文の受付を開始します。
+                創業期を迎えた今、限られた数量のみ、先行登録と各種受付を開始します。
             </p>
-            <div class="pt-4">
-                <a href="#preorder" class="inline-block bg-ato-green text-ato-ecru font-sans font-medium text-sm tracking-widest px-10 py-5 hover:bg-opacity-90 shadow-xl transition transform hover:-translate-y-0.5">
-                    創業期 先行登録・優先販売へ進む
+            <div class="pt-4 flex flex-wrap justify-center gap-4">
+                <a href="#form-register" class="bg-ato-green text-ato-ecru font-sans font-medium text-xs tracking-widest px-8 py-4 hover:bg-opacity-90 shadow-lg transition">
+                    先行登録へ
+                </a>
+                <a href="#form-survey" class="bg-white border border-ato-green text-ato-green font-sans font-medium text-xs tracking-widest px-8 py-4 hover:bg-ato-light transition">
+                    商品開発アンケート
                 </a>
             </div>
         </div>
@@ -90,14 +93,14 @@
                         山口県の北部に位置する阿東・嘉年は、冬の豪雪が春へ向かうにつれて豊かな雪解け水となり、地味深い土壌を潤します。この厳しくも美しい自然環境が、他にはない深い甘みと粘りを持つ米を生み出します。
                     </p>
                     <p class="font-bold text-ato-green">
-                        「誰が、どこで、どう育てたか」がすべての袋に刻まれていること。それが阿東ブランドの絶対的な基準です[span_4](start_span)[span_4](end_span)。
+                        「誰が、どこで、どう育てたか」がすべての袋に刻まれていること。それが阿東ブランドの絶対的な基準です。
                     </p>
                 </div>
                 <div class="bg-ato-light p-8 border-l-2 border-ato-gold space-y-4 font-serif">
                     <h3 class="font-bold text-ato-green text-base">三つの約束</h3>
                     <ul class="space-y-3 text-xs font-sans text-gray-600">
-                        <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>完全産地直結：</strong>嘉年の生産者から直接仕入れた原料のみを使用[span_5](start_span)[span_5](end_span)。</li>
-                        <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>適正価格の堅持：</strong>安売りをせず、生産者の誇りと環境保全へ還元[span_6](start_span)[span_6](end_span)。</li>
+                        <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>完全産地直結：</strong>嘉年の生産者から直接仕入れた原料のみを使用。</li>
+                        <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>適正価格の堅持：</strong>安売りをせず、生産者の誇りと環境保全へ還元。</li>
                         <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>純粋な素材：</strong>嘉年の自然の力をそのまま製粉した、まっすぐな米粉。</li>
                     </ul>
                 </div>
@@ -132,28 +135,48 @@
         </div>
     </section>
 
-    <!-- 先行登録・仮注文（メインCTA） -->
-    <section id="preorder" class="py-24 px-6 bg-white border-t border-ato-green/10">
-        <div class="max-w-3xl mx-auto text-center space-y-8 bg-ato-light p-10 md:p-16 border border-ato-green/20 shadow-sm">
-            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase">Founding Member Registration</span>
-            <h2 class="text-2xl md:text-4xl font-bold text-ato-green leading-tight">
-                創業期 先行登録・<br class="hidden md:block">優先販売（仮注文）のご案内
-            </h2>
+    <!-- Googleフォーム 埋め込みセクション群 -->
+    <section id="preorder" class="py-24 px-6 bg-white border-t border-ato-green/10 space-y-20">
+        
+        <!-- 1. 先行登録フォーム -->
+        <div id="form-register" class="max-w-3xl mx-auto text-center space-y-6 bg-ato-light p-8 md:p-12 border border-ato-green/20 shadow-sm">
+            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase">Step 01</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-ato-green">先行登録フォーム</h2>
             <div class="w-8 h-[1px] bg-ato-gold mx-auto"></div>
-            <p class="font-sans text-xs md:text-sm text-gray-700 leading-relaxed max-w-xl mx-auto">
-                阿東・嘉年の地で大切に育まれた最初の収穫をお届けするため、ただいま事前の「先行登録」および「仮注文」を受け付けております。<br>
-                私たちの思想に共感し、初期の歩みを共に支えてくださる方へ、優先的にご案内いたします。
+            <p class="font-sans text-xs md:text-sm text-gray-700">
+                創業期メンバーとしての先行登録はこちらからお願いいたします。
             </p>
-            
-            <div class="pt-4 space-y-4">
-                <a href="https://komeHANAYUKI.base.ec/" class="inline-block bg-ato-green text-ato-ecru font-sans font-medium text-sm tracking-widest px-10 py-5 hover:bg-opacity-90 shadow-lg transition">
-                    優先販売（BASE）で仮注文・登録を行う
-                </a>
-                <p class="text-[11px] text-gray-500 font-sans">
-                    ※事前登録・仮注文は無料です。正式なご案内後に本手続となりますのでご安心ください。
-                </p>
+            <div class="iframe-container flex justify-center pt-2">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdowtleeg_AEBd7fOwgiRpOZF41QzDW51-roD6kAUm6MCTnFA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
             </div>
         </div>
+
+        <!-- 2. 先行受付フォーム -->
+        <div id="form-reception" class="max-w-3xl mx-auto text-center space-y-6 bg-ato-light p-8 md:p-12 border border-ato-green/20 shadow-sm">
+            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase">Step 02</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-ato-green">先行受付フォーム</h2>
+            <div class="w-8 h-[1px] bg-ato-gold mx-auto"></div>
+            <p class="font-sans text-xs md:text-sm text-gray-700">
+                商品や購入に関する先行受付・お問い合わせはこちらからどうぞ。
+            </p>
+            <div class="iframe-container flex justify-center pt-2">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGT-aI5gr7m7WOw0G4f_zPGQ9VwkM9bT4pRZJmzU1X6CUUMQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+            </div>
+        </div>
+
+        <!-- 3. 商品開発アンケートフォーム -->
+        <div id="form-survey" class="max-w-3xl mx-auto text-center space-y-6 bg-ato-light p-8 md:p-12 border border-ato-green/20 shadow-sm">
+            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase">Feedback</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-ato-green">商品開発アンケートフォーム</h2>
+            <div class="w-8 h-[1px] bg-ato-gold mx-auto"></div>
+            <p class="font-sans text-xs md:text-sm text-gray-700">
+                今後のより良い商品づくりのために、ぜひ皆様のご意見をお聞かせください。
+            </p>
+            <div class="iframe-container flex justify-center pt-2">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSde3u4SxDSePm8K3fkm-uPq11pnRwLkRAjBmdKg2zl6pehC5A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+            </div>
+        </div>
+
     </section>
 
     <!-- フッター -->
