@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>米こや 華雪 ｜ 阿東・嘉年産 プレミアム米粉</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'ato-green': '#2D4A2D',
+                        'ato-green': '#1E331E',
+                        'ato-deep': '#142214',
                         'ato-ecru': '#F5F0E8',
-                        'ato-gold': '#B88630',
-                        'ato-black': '#2B2B2B',
+                        'ato-gold': '#C5A059',
+                        'ato-black': '#222222',
                         'ato-light': '#FAF7F2',
+                        'ato-card': '#FFFFFF',
                     },
                     fontFamily: {
                         'serif': ['"Noto Serif JP"', 'serif'],
@@ -27,152 +29,197 @@
         }
     </script>
     <style>
-        body { background-color: #F5F0E8; color: #2B2B2B; line-height: 2.0; }
-        .iframe-container iframe { width: 100%; max-width: 700px; height: 520px; border: none; }
+        body { background-color: #F5F0E8; color: #2B2B2B; line-height: 2.2; }
+        .iframe-wrapper iframe { width: 100%; max-width: 720px; height: 560px; border: none; background: transparent; }
+        .luxury-shadow { box-shadow: 0 20px 40px -10px rgba(30, 51, 30, 0.12), 0 10px 20px rgba(0, 0, 0, 0.05); }
     </style>
 </head>
 <body class="font-serif antialiased selection:bg-ato-green selection:text-ato-ecru">
 
     <!-- ヘッダー -->
-    <header class="fixed w-full bg-[#F5F0E8]/90 backdrop-blur-md z-50 border-b border-ato-green/10">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-serif font-bold text-lg tracking-widest text-ato-green">
-                米こや 華雪 <span class="text-xs font-sans font-normal text-ato-gold ml-2">阿東・嘉年</span>
+    <header class="fixed w-full bg-[#F5F0E8]/95 backdrop-blur-md z-50 border-b border-ato-green/10">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="w-2.5 h-2.5 bg-ato-gold rounded-full"></span>
+                <span class="font-serif font-bold text-lg tracking-widest text-ato-green">米こや 華雪</span>
+                <span class="text-xs font-sans text-ato-gold tracking-widest pl-2 border-l border-ato-gold/40 hidden sm:inline">阿東・嘉年</span>
             </div>
-            <a href="#preorder" class="bg-ato-green hover:bg-opacity-90 text-ato-ecru text-xs tracking-wider font-sans px-5 py-2.5 transition duration-300">
-                各種フォームへ
-            </a>
+            <div class="flex items-center space-x-4">
+                <a href="#forms" class="bg-ato-green hover:bg-ato-deep text-ato-ecru text-xs tracking-widest font-sans px-6 py-3 transition duration-300 shadow-sm">
+                    各種受付・フォームへ
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- ファーストビュー -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32 pb-20 relative overflow-hidden">
-        <div class="absolute inset-0 pointer-events-none opacity-5 flex justify-center items-center">
-            <span class="font-en text-[30vw] text-ato-green select-none">KANE</span>
+    <!-- ファーストビュー（背景ビジュアル入り） -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-36 pb-24 relative overflow-hidden">
+        <!-- 背景画像とダークオーバーレイ -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1920&auto=format&fit=crop" alt="阿東・嘉年の風景" class="w-full h-full object-cover filter brightness-[0.45] contrast-[1.1]">
+            <div class="absolute inset-0 bg-gradient-to-b from-ato-deep/60 via-ato-deep/40 to-[#F5F0E8]"></div>
         </div>
         
-        <div class="max-w-3xl mx-auto relative z-10 space-y-8">
-            <p class="text-ato-gold text-xs tracking-[0.3em] uppercase font-sans">山口県山口市阿東・嘉年地域 ── 産地直結のプレミアム米粉</p>
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-ato-green leading-relaxed">
-                一袋の米粉から、<br>阿東嘉年の未来をつくる。
+        <div class="max-w-4xl mx-auto relative z-10 space-y-10 text-white">
+            <div class="inline-block border border-ato-gold/70 px-6 py-2 bg-ato-black/40 backdrop-blur-sm">
+                <p class="text-ato-gold text-xs tracking-[0.35em] uppercase font-sans font-medium">山口県山口市阿東・嘉年地域 ── 産地直結プレミアム米粉</p>
+            </div>
+            
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-wide drop-shadow-md">
+                一袋の米粉から、<br>
+                <span class="font-en font-normal italic text-ato-gold text-4xl md:text-6xl lg:text-7xl block mt-2">Ato-Kane</span>
+                の未来をつくる。
             </h1>
-            <div class="w-12 h-[1px] bg-ato-gold mx-auto"></div>
-            <p class="text-ato-black font-sans text-sm md:text-base leading-loose max-w-2xl mx-auto">
-                標高300〜600mの深い盆地、阿東・嘉年（かね）。<br>
+
+            <div class="w-16 h-[1px] bg-ato-gold mx-auto"></div>
+
+            <p class="font-sans text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-light text-gray-200 drop-shadow">
+                標高300〜600mの深い盆地、阿東・嘉年。<br>
                 十種ヶ峰がもたらす清らかな雪解け水と、阿武川源流の豊かな恵み。<br>
-                昼夜の激しい寒暖差が、極上のコシヒカリを育て上げました。<br>
-                価格競争に加わらず、土地の物語と生産者の手仕事をそのままに届ける。<br>
-                創業期を迎えた今、限られた数量のみ、先行登録と各種受付を開始します。
+                昼夜の激しい寒暖差が育んだ極上のコシヒカリを、純度100%の米粉へ。
             </p>
-            <div class="pt-4 flex flex-wrap justify-center gap-4">
-                <a href="#form-register" class="bg-ato-green text-ato-ecru font-sans font-medium text-xs tracking-widest px-8 py-4 hover:bg-opacity-90 shadow-lg transition">
-                    先行登録へ
+
+            <div class="pt-6 flex flex-wrap justify-center gap-4">
+                <a href="#form-register" class="bg-ato-gold text-ato-deep font-sans font-bold text-xs tracking-[0.2em] px-9 py-4 hover:bg-white shadow-xl transition transform hover:-translate-y-0.5">
+                    先行登録を行う
                 </a>
-                <a href="#form-survey" class="bg-white border border-ato-green text-ato-green font-sans font-medium text-xs tracking-widest px-8 py-4 hover:bg-ato-light transition">
+                <a href="#form-survey" class="bg-transparent border border-white text-white font-sans font-medium text-xs tracking-[0.2em] px-9 py-4 hover:bg-white hover:text-ato-deep transition">
                     商品開発アンケート
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- 嘉年という「唯一の原点」 -->
-    <section class="py-24 px-6 bg-white border-y border-ato-green/10">
-        <div class="max-w-4xl mx-auto space-y-16">
+    <!-- 嘉年という「唯一の原点」（挿し絵カード付き） -->
+    <section class="py-28 px-6 bg-ato-card border-y border-ato-green/10">
+        <div class="max-w-5xl mx-auto space-y-20">
             <div class="text-center space-y-4">
-                <span class="text-ato-gold text-xs tracking-[0.2em] font-sans">THE ORIGIN</span>
-                <h2 class="text-2xl md:text-3xl font-bold text-ato-green">なぜ、阿東・嘉年なのか</h2>
-                <div class="w-8 h-[1px] bg-ato-gold mx-auto"></div>
+                <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase font-semibold">The Origin</span>
+                <h2 class="text-2xl md:text-4xl font-bold text-ato-green tracking-wide">なぜ、阿東・嘉年なのか</h2>
+                <div class="w-12 h-[1px] bg-ato-gold mx-auto"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center font-sans text-sm text-gray-700 leading-relaxed">
-                <div class="space-y-6">
-                    <p>
+            <div class="grid md:grid-cols-2 gap-14 items-center font-sans text-sm text-gray-700 leading-relaxed">
+                <!-- 左側テキスト -->
+                <div class="space-y-6 font-light">
+                    <p class="text-base text-ato-green font-normal font-serif leading-loose">
                         大量生産の効率や、産地の見えないブレンド米が溢れる現代において、私たちが選んだのは「不便で、しかし嘘のない場所」でした。
                     </p>
                     <p>
-                        山口県の北部に位置する阿東・嘉年は、冬の豪雪が春へ向かうにつれて豊かな雪解け水となり、地味深い土壌を潤します。この厳しくも美しい自然環境が、他にはない深い甘みと粘りを持つ米を生み出します。
+                        山口県北部に位置する阿東・嘉年は、冬の豪雪が春へ向かうにつれて豊かな雪解け水となり、地味深い土壌を潤します。この厳しくも美しい自然環境が、他にはない深い甘みと粘りを持つ米を生み出します。
                     </p>
-                    <p class="font-bold text-ato-green">
+                    <p class="font-medium text-ato-green border-l-2 border-ato-gold pl-4 py-1">
                         「誰が、どこで、どう育てたか」がすべての袋に刻まれていること。それが阿東ブランドの絶対的な基準です。
                     </p>
                 </div>
-                <div class="bg-ato-light p-8 border-l-2 border-ato-gold space-y-4 font-serif">
-                    <h3 class="font-bold text-ato-green text-base">三つの約束</h3>
-                    <ul class="space-y-3 text-xs font-sans text-gray-600">
-                        <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>完全産地直結：</strong>嘉年の生産者から直接仕入れた原料のみを使用。</li>
-                        <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>適正価格の堅持：</strong>安売りをせず、生産者の誇りと環境保全へ還元。</li>
-                        <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>純粋な素材：</strong>嘉年の自然の力をそのまま製粉した、まっすぐな米粉。</li>
-                    </ul>
+                <!-- 右側：美しいイメージ挿し絵カード -->
+                <div class="relative group">
+                    <div class="absolute -inset-2 bg-ato-gold/20 rounded-lg blur-sm transform rotate-1"></div>
+                    <div class="relative bg-white p-3 border border-ato-green/10 luxury-shadow space-y-4">
+                        <img src="https://images.unsplash.com/photo-1533371427038-6ddc294dd5bb?q=80&w=1000&auto=format&fit=crop" alt="田園風景" class="w-full h-64 object-cover">
+                        <div class="p-4 space-y-2 font-serif">
+                            <h3 class="font-bold text-ato-green text-base">三つの約束</h3>
+                            <ul class="space-y-2 text-xs font-sans text-gray-600">
+                                <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>完全産地直結：</strong>嘉年の生産者から直接仕入れた原料のみ。</li>
+                                <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>適正価格の坚持：</strong>安売りをせず、生産者の誇りと環境へ還元。</li>
+                                <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>純粋な素材：</strong>自然の力をそのまま製粉したまっすぐな米粉。</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 商品ラインナップの思想 -->
-    <section class="py-24 px-6 max-w-4xl mx-auto">
+    <!-- 商品ラインナップの思想（写真付きカード） -->
+    <section class="py-28 px-6 max-w-5xl mx-auto">
         <div class="text-center space-y-4 mb-16">
-            <span class="text-ato-gold text-xs tracking-[0.2em] font-sans">PRODUCTS</span>
-            <h2 class="text-2xl md:text-3xl font-bold text-ato-green">嘉年の恵みを、日常の食卓へ</h2>
-            <div class="w-8 h-[1px] bg-ato-gold mx-auto"></div>
-            <p class="font-sans text-xs text-gray-600">白米・玄米の素材そのものの魅力を活かした、純度100%の米粉ラインナップ。</p>
+            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase font-semibold">Products Philosophy</span>
+            <h2 class="text-2xl md:text-4xl font-bold text-ato-green tracking-wide">嘉年の恵みを、日常の食卓へ</h2>
+            <div class="w-12 h-[1px] bg-ato-gold mx-auto"></div>
+            <p class="font-sans text-xs text-gray-600 tracking-wider">白米・玄米の素材そのものの魅力を活かした、純度100%の米粉ラインナップ。</p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8 font-sans">
-            <div class="bg-white p-8 border border-ato-green/10 shadow-sm space-y-3">
-                <span class="text-xs text-ato-gold tracking-widest font-en">STANDARD LINE</span>
-                <h3 class="font-serif text-xl font-bold text-ato-green">阿東米粉（白米）</h3>
-                <p class="text-xs text-gray-600 leading-relaxed">
-                    嘉年産コシヒカリをきめ細やかに製粉。パン、お菓子、毎日の料理のつなぎまで、しっとりとした仕上がりをもたらす万能の主力ライン。
-                </p>
+        <div class="grid md:grid-cols-2 gap-10 font-sans">
+            <!-- 白米カード -->
+            <div class="bg-ato-card border border-ato-green/10 luxury-shadow overflow-hidden group flex flex-col justify-between">
+                <div class="overflow-hidden h-56">
+                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop" alt="白米のイメージ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-8 space-y-3">
+                    <span class="text-xs text-ato-gold tracking-[0.2em] font-en font-bold uppercase">Standard Line</span>
+                    <h3 class="font-serif text-2xl font-bold text-ato-green">阿東米粉（白米）</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">
+                        嘉年産コシヒカリをきめ細やかに製粉。パン、お菓子、毎日の料理のつなぎまで、しっとりとした上品な仕上がりをもたらす万能の主力ライン。
+                    </p>
+                </div>
             </div>
-            <div class="bg-white p-8 border border-ato-green/10 shadow-sm space-y-3">
-                <span class="text-xs text-ato-gold tracking-widest font-en">HEALTH LINE</span>
-                <h3 class="font-serif text-xl font-bold text-ato-green">阿東米粉（玄米）</h3>
-                <p class="text-xs text-gray-600 leading-relaxed">
-                    玄米由来の豊かなミネラルと香ばしい風味をそのまま残しました。健康志向のインナーケアや、香ばしさを活かした焼き菓子に最適。
-                </p>
+            <!-- 玄米カード -->
+            <div class="bg-ato-card border border-ato-green/10 luxury-shadow overflow-hidden group flex flex-col justify-between">
+                <div class="overflow-hidden h-56">
+                    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?q=80&w=800&auto=format&fit=crop" alt="玄米のイメージ" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-8 space-y-3">
+                    <span class="text-xs text-ato-gold tracking-[0.2em] font-en font-bold uppercase">Health Line</span>
+                    <h3 class="font-serif text-2xl font-bold text-ato-green">阿東米粉（玄米）</h3>
+                    <p class="text-xs text-gray-600 leading-relaxed font-light">
+                        玄米由来の豊かなミネラルと香ばしい風味をそのまま残しました。健康志向のインナーケアや、香ばしさを活かした焼き菓子・パン作りに最適。
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Googleフォーム 埋め込みセクション群 -->
-    <section id="preorder" class="py-24 px-6 bg-white border-t border-ato-green/10 space-y-20">
+    <section id="forms" class="py-28 px-6 bg-gradient-to-b from-[#F5F0E8] to-[#EAE3D5] border-t border-ato-green/10 space-y-20">
         
-        <!-- 1. 先行登録フォーム -->
-        <div id="form-register" class="max-w-3xl mx-auto text-center space-y-6 bg-ato-light p-8 md:p-12 border border-ato-green/20 shadow-sm">
-            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase">Step 01</span>
-            <h2 class="text-2xl md:text-3xl font-bold text-ato-green">先行登録フォーム</h2>
-            <div class="w-8 h-[1px] bg-ato-gold mx-auto"></div>
-            <p class="font-sans text-xs md:text-sm text-gray-700">
-                創業期メンバーとしての先行登録はこちらからお願いいたします。
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase font-semibold">Application & Feedback</span>
+            <h2 class="text-2xl md:text-4xl font-bold text-ato-green tracking-wide">各種ご案内・受付フォーム</h2>
+            <div class="w-12 h-[1px] bg-ato-gold mx-auto"></div>
+            <p class="font-sans text-xs text-gray-600 leading-relaxed">
+                創業期メンバーとしての登録や、商品開発に向けたアンケートをこちらから受け付けております。お気軽にご入力ください。
             </p>
-            <div class="iframe-container flex justify-center pt-2">
+        </div>
+
+        <!-- 1. 先行登録フォーム -->
+        <div id="form-register" class="max-w-4xl mx-auto bg-ato-card p-8 md:p-14 border border-ato-green/15 luxury-shadow space-y-6">
+            <div class="flex items-center space-x-3 border-b border-ato-green/10 pb-4">
+                <span class="w-2 h-2 bg-ato-gold rounded-full"></span>
+                <h3 class="text-xl md:text-2xl font-bold text-ato-green">先行登録フォーム</h3>
+            </div>
+            <p class="font-sans text-xs md:text-sm text-gray-600 font-light">
+                創業期プロジェクトの先行登録はこちらからお願いいたします。
+            </p>
+            <div class="iframe-wrapper flex justify-center pt-2">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdowtleeg_AEBd7fOwgiRpOZF41QzDW51-roD6kAUm6MCTnFA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
             </div>
         </div>
 
         <!-- 2. 先行受付フォーム -->
-        <div id="form-reception" class="max-w-3xl mx-auto text-center space-y-6 bg-ato-light p-8 md:p-12 border border-ato-green/20 shadow-sm">
-            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase">Step 02</span>
-            <h2 class="text-2xl md:text-3xl font-bold text-ato-green">先行受付フォーム</h2>
-            <div class="w-8 h-[1px] bg-ato-gold mx-auto"></div>
-            <p class="font-sans text-xs md:text-sm text-gray-700">
-                商品や購入に関する先行受付・お問い合わせはこちらからどうぞ。
+        <div id="form-reception" class="max-w-4xl mx-auto bg-ato-card p-8 md:p-14 border border-ato-green/15 luxury-shadow space-y-6">
+            <div class="flex items-center space-x-3 border-b border-ato-green/10 pb-4">
+                <span class="w-2 h-2 bg-ato-gold rounded-full"></span>
+                <h3 class="text-xl md:text-2xl font-bold text-ato-green">先行受付フォーム</h3>
+            </div>
+            <p class="font-sans text-xs md:text-sm text-gray-600 font-light">
+                商品のお取り扱いや優先案内に関する先行受付はこちらからどうぞ。
             </p>
-            <div class="iframe-container flex justify-center pt-2">
+            <div class="iframe-wrapper flex justify-center pt-2">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGT-aI5gr7m7WOw0G4f_zPGQ9VwkM9bT4pRZJmzU1X6CUUMQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
             </div>
         </div>
 
         <!-- 3. 商品開発アンケートフォーム -->
-        <div id="form-survey" class="max-w-3xl mx-auto text-center space-y-6 bg-ato-light p-8 md:p-12 border border-ato-green/20 shadow-sm">
-            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase">Feedback</span>
-            <h2 class="text-2xl md:text-3xl font-bold text-ato-green">商品開発アンケートフォーム</h2>
-            <div class="w-8 h-[1px] bg-ato-gold mx-auto"></div>
-            <p class="font-sans text-xs md:text-sm text-gray-700">
-                今後のより良い商品づくりのために、ぜひ皆様のご意見をお聞かせください。
+        <div id="form-survey" class="max-w-4xl mx-auto bg-ato-card p-8 md:p-14 border border-ato-green/15 luxury-shadow space-y-6">
+            <div class="flex items-center space-x-3 border-b border-ato-green/10 pb-4">
+                <span class="w-2 h-2 bg-ato-gold rounded-full"></span>
+                <h3 class="text-xl md:text-2xl font-bold text-ato-green">商品開発アンケートフォーム</h3>
+            </div>
+            <p class="font-sans text-xs md:text-sm text-gray-600 font-light">
+                今後のより良い商品づくりの参考に、皆様の率直なご意見・ご要望をお聞かせください。
             </p>
-            <div class="iframe-container flex justify-center pt-2">
+            <div class="iframe-wrapper flex justify-center pt-2">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSde3u4SxDSePm8K3fkm-uPq11pnRwLkRAjBmdKg2zl6pehC5A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
             </div>
         </div>
@@ -181,8 +228,8 @@
 
     <!-- フッター -->
     <footer class="bg-ato-black text-ato-ecru py-16 text-center font-sans text-xs space-y-4">
-        <p class="font-serif text-sm tracking-widest">米こや 華雪</p>
-        <p class="text-gray-400">山口県山口市阿東・嘉年地域</p>
+        <p class="font-serif text-sm tracking-widest text-ato-gold">米こや 華雪</p>
+        <p class="text-gray-400 font-light">山口県山口市阿東・嘉年地域</p>
         <div class="pt-6 border-t border-gray-800 text-gray-500 text-[10px]">
             &copy; 2026 ATO KANE BRAND. All rights reserved.
         </div>
