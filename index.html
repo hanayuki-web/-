@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>米こや 華雪 ｜ 阿東・嘉年産 プレミアム米粉</title>
+    <title>米こや 華雪｜峰の息吹 - あなたに寄り添う、やさしい米粉。</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Serif+JP:wght@400;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -15,223 +15,238 @@
                         'ato-deep': '#142214',
                         'ato-ecru': '#F5F0E8',
                         'ato-gold': '#C5A059',
-                        'ato-black': '#222222',
-                        'ato-light': '#FAF7F2',
-                        'ato-card': '#FFFFFF',
+                        'ato-accent': '#D9C5A0'
                     },
                     fontFamily: {
                         'serif': ['"Noto Serif JP"', 'serif'],
                         'sans': ['"Noto Sans JP"', 'sans-serif'],
-                        'en': ['"Cormorant Garamond"', 'serif'],
                     }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #F5F0E8; color: #2B2B2B; line-height: 2.2; }
-        .iframe-wrapper iframe { width: 100%; max-width: 720px; height: 560px; border: none; background: transparent; }
-        .luxury-shadow { box-shadow: 0 20px 40px -10px rgba(30, 51, 30, 0.12), 0 10px 20px rgba(0, 0, 0, 0.05); }
+        body { background-color: #F5F0E8; color: #2B2B2B; scroll-behavior: smooth; }
+        .section-title { font-size: 0.75rem; letter-spacing: 0.3em; color: #C5A059; text-transform: uppercase; font-family: 'Noto Sans JP', sans-serif; font-weight: 600; display: block; margin-bottom: 1rem; }
     </style>
 </head>
-<body class="font-serif antialiased selection:bg-ato-green selection:text-ato-ecru">
+<body class="font-sans antialiased">
 
-    <!-- ヘッダー -->
-    <header class="fixed w-full bg-[#F5F0E8]/95 backdrop-blur-md z-50 border-b border-ato-green/10">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <span class="w-2.5 h-2.5 bg-ato-gold rounded-full"></span>
-                <span class="font-serif font-bold text-lg tracking-widest text-ato-green">米こや 華雪</span>
-                <span class="text-xs font-sans text-ato-gold tracking-widest pl-2 border-l border-ato-gold/40 hidden sm:inline">阿東・嘉年</span>
+    <!-- 1. Header -->
+    <header class="fixed w-full bg-[#F5F0E8]/90 backdrop-blur-md z-50 border-b border-ato-green/10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-serif font-bold text-lg text-ato-green flex items-center gap-3">
+                <span>米こや 華雪</span>
+                <span class="text-sm border-l border-ato-green/30 pl-3">峰の息吹</span>
             </div>
-            <div class="flex items-center space-x-4">
-                <a href="#forms" class="bg-ato-green hover:bg-ato-deep text-ato-ecru text-xs tracking-widest font-sans px-6 py-3 transition duration-300 shadow-sm">
-                    各種受付・フォームへ
-                </a>
-            </div>
+            <!-- PRODUCT_STATUS に応じてリンク先・文言を変更できる設計 -->
+            <a href="#section-18" class="bg-ato-green text-white text-xs px-5 py-2 hover:bg-ato-deep transition">先行登録する</a>
         </div>
     </header>
 
-    <!-- ファーストビュー（背景ビジュアル入り） -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-36 pb-24 relative overflow-hidden">
-        <!-- 背景画像とダークオーバーレイ -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=1920&auto=format&fit=crop" alt="高標高の棚田と雪解け水" class="w-full h-full object-cover filter brightness-75">
-            <div class="absolute inset-0 bg-gradient-to-b from-ato-deep/60 via-ato-deep/40 to-[#F5F0E8]"></div>
+    <!-- 1. Hero -->
+    <section id="section-1" class="pt-32 pb-20 px-4 text-center">
+        <div class="max-w-4xl mx-auto space-y-8">
+            <h1 class="font-serif text-3xl md:text-5xl font-bold text-ato-green leading-tight">
+                あなたに寄り添う、<br class="md:hidden">やさしい米粉。
+            </h1>
+            <p class="font-serif text-lg md:text-xl text-gray-700">嘉年の米に、新しい価値を。</p>
+            <div class="pt-6">
+                <img src="https://images.unsplash.com/photo-1536304929831-ee1ca9d4490c?q=80&w=1200&auto=format&fit=crop" alt="嘉年の米" class="w-full h-80 object-cover rounded-sm shadow-lg">
+            </div>
         </div>
-        
-        <div class="max-w-4xl mx-auto relative z-10 space-y-10 text-white">
-            <div class="inline-block border border-ato-gold/70 px-6 py-2 bg-ato-black/40 backdrop-blur-sm">
-                <p class="text-ato-gold text-xs tracking-[0.35em] uppercase font-sans font-medium">山口県山口市阿東・嘉年地域 ── 産地直結プレミアム米粉</p>
+    </section>
+
+    <!-- 2. 3つの入口 -->
+    <section id="section-2" class="py-12 px-4 bg-white border-y border-gray-200">
+        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            <a href="#section-15" class="p-6 border border-ato-green/20 hover:border-ato-gold transition group">
+                <h3 class="font-bold text-ato-green mb-2">自分に合うか調べる</h3>
+                <p class="text-xs text-gray-500">6つの質問で用途診断</p>
+            </a>
+            <a href="#section-18" class="p-6 border border-ato-green/20 hover:border-ato-gold transition group bg-ato-ecru">
+                <h3 class="font-bold text-ato-green mb-2">最新情報を受け取る</h3>
+                <p class="text-xs text-gray-500">先行登録・仮注文へ</p>
+            </a>
+            <a href="#section-16" class="p-6 border border-ato-green/20 hover:border-ato-gold transition group">
+                <h3 class="font-bold text-ato-green mb-2">業務用のご相談</h3>
+                <p class="text-xs text-gray-500">飲食店・事業者様へ</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. 峰の息吹とは & 4. WhyMine -->
+    <section id="section-3-4" class="py-20 px-4">
+        <div class="max-w-3xl mx-auto text-center space-y-6">
+            <span class="section-title">About Product</span>
+            <h2 class="font-serif text-2xl font-bold text-ato-green">「峰の息吹」とは</h2>
+            <p class="text-sm leading-relaxed text-gray-700 text-left md:text-center">
+                山口県山口市阿東嘉年（かね）。<br>
+                厳しい寒暖差と豊かな雪解け水が育んだ、甘みと粘りの強い米。<br>
+                そのポテンシャルを最大限に引き出した、純度100%のプレミアム米粉です。
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. 嘉年ストーリー & 6. 山→水→田→米→米粉→食卓 -->
+    <section id="section-5-6" class="py-20 px-4 bg-ato-green text-white">
+        <div class="max-w-4xl mx-auto space-y-12">
+            <div class="text-center">
+                <span class="text-ato-gold text-xs tracking-[0.3em] font-semibold">The Story of Kane</span>
+                <h2 class="font-serif text-2xl font-bold mt-4">自然の循環が、食卓をつなぐ</h2>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-sm font-bold gap-4 text-ato-ecru opacity-90">
+                <span>山</span> <span class="hidden md:inline">→</span>
+                <span>水</span> <span class="hidden md:inline">→</span>
+                <span>田</span> <span class="hidden md:inline">→</span>
+                <span>米</span> <span class="hidden md:inline">→</span>
+                <span class="text-ato-gold text-lg">米粉（峰の息吹）</span> <span class="hidden md:inline">→</span>
+                <span>食卓</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. 用途診断 (Q1〜Q6) -->
+    <section id="section-15" class="py-24 px-4 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="section-title">Diagnosis</span>
+                <h2 class="font-serif text-2xl font-bold text-ato-green">あなたにぴったりの使い方診断</h2>
+                <p class="text-xs text-gray-500 mt-2">※匿名で回答いただけます</p>
             </div>
             
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-wide drop-shadow-md">
-                一袋の米粉から、<br>
-                <span class="font-en font-normal italic text-ato-gold text-4xl md:text-6xl lg:text-7xl block mt-2">Ato-Kane</span>
-                の未来をつくる。
-            </h1>
-
-            <div class="w-16 h-[1px] bg-ato-gold mx-auto"></div>
-
-            <p class="font-sans text-sm md:text-base leading-relaxed max-w-2xl mx-auto font-light text-gray-200 drop-shadow">
-                標高300〜600mの深い盆地、阿東・嘉年。<br>
-                十種ヶ峰がもたらす清らかな雪解け水と、阿武川源流の豊かな恵み。<br>
-                昼夜の激しい寒暖差が育んだ極上のコシヒカリを、純度100%の米粉へ。
-            </p>
-
-            <div class="pt-6 flex flex-wrap justify-center gap-4">
-                <a href="#form-register" class="bg-ato-gold text-ato-deep font-sans font-bold text-xs tracking-[0.2em] px-9 py-4 hover:bg-white shadow-xl transition transform hover:-translate-y-0.5">
-                    先行登録を行う
-                </a>
-                <a href="#form-survey" class="bg-transparent border border-white text-white font-sans font-medium text-xs tracking-[0.2em] px-9 py-4 hover:bg-white hover:text-ato-deep transition">
-                    商品開発アンケート
-                </a>
+            <div class="bg-ato-ecru p-8 rounded-sm shadow-sm space-y-8">
+                <!-- 診断フォームUIモック（実際にはJSやSupabaseと連携） -->
+                <div class="space-y-4">
+                    <p class="font-bold text-sm text-ato-green">Q1. 何に使ってみたいですか？</p>
+                    <select class="w-full p-3 border border-gray-300 text-sm">
+                        <option>毎日の料理（とろみ・揚げ物）</option>
+                        <option>お菓子作り</option>
+                        <option>パン作り</option>
+                    </select>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-sm text-ato-green">Q2. 米粉を使ったことはありますか？</p>
+                    <select class="w-full p-3 border border-gray-300 text-sm">
+                        <option>よく使っている</option>
+                        <option>数回使ったことがある</option>
+                        <option>初めて</option>
+                    </select>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-sm text-ato-green">Q3. どれくらいの頻度で使いたいですか？</p>
+                    <select class="w-full p-3 border border-gray-300 text-sm">
+                        <option>ほぼ毎日</option>
+                        <option>週に数回</option>
+                        <option>月に数回</option>
+                    </select>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-sm text-ato-green">Q4. 500gなら、いくらまでなら試してみたいですか？</p>
+                    <input type="text" placeholder="例：800円" class="w-full p-3 border border-gray-300 text-sm">
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-sm text-ato-green">Q5. 米粉を選ぶとき、一番大切なのは？</p>
+                    <select class="w-full p-3 border border-gray-300 text-sm">
+                        <option>品質・安全性</option>
+                        <option>価格</option>
+                        <option>産地の応援</option>
+                        <option>使いやすさ</option>
+                    </select>
+                </div>
+                <div class="space-y-4">
+                    <p class="font-bold text-sm text-ato-green">Q6. 発売されたら？</p>
+                    <select class="w-full p-3 border border-gray-300 text-sm">
+                        <option>すぐに買ってみたい</option>
+                        <option>詳細を見てから検討する</option>
+                    </select>
+                </div>
+                <button class="w-full bg-ato-green text-white py-4 font-bold tracking-widest text-sm hover:bg-ato-deep transition">
+                    診断結果を見る
+                </button>
             </div>
         </div>
     </section>
 
-    <!-- 嘉年という「唯一の原点」（挿し絵カード付き） -->
-    <section class="py-28 px-6 bg-ato-card border-y border-ato-green/10">
-        <div class="max-w-5xl mx-auto space-y-20">
-            <div class="text-center space-y-4">
-                <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase font-semibold">The Origin</span>
-                <h2 class="text-2xl md:text-4xl font-bold text-ato-green tracking-wide">なぜ、阿東・嘉年なのか</h2>
-                <div class="w-12 h-[1px] bg-ato-gold mx-auto"></div>
+    <!-- 18. 先行登録 & 19. 仮注文 フォーム領域 -->
+    <section id="section-18" class="py-24 px-4 bg-ato-green text-white">
+        <div class="max-w-2xl mx-auto space-y-12">
+            <div class="text-center">
+                <span class="text-ato-gold text-xs tracking-[0.3em] font-semibold">Pre-order & Registration</span>
+                <h2 class="font-serif text-2xl font-bold mt-4">先行登録・仮注文フォーム</h2>
+                <p class="text-xs mt-4 opacity-80 border border-ato-gold/50 p-3 bg-black/20">
+                    ※これは発売前の仮注文です。決済は発生しません。<br>商品化・販売が確定した場合、正式な購入案内をお送りします。
+                </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-14 items-center font-sans text-sm text-gray-700 leading-relaxed">
-                <!-- 左側テキスト -->
-                <div class="space-y-6 font-light">
-                    <p class="text-base text-ato-green font-normal font-serif leading-loose">
-                        大量生産の効率や、産地の見えないブレンド米が溢れる現代において、私たちが選んだのは「不便で、しかし嘘のない場所」でした。
-                    </p>
-                    <p>
-                        山口県北部に位置する阿東・嘉年は、冬の豪雪が春へ向かうにつれて豊かな雪解け水となり、地味深い土壌を潤します���この厳しい自然環境こそが、コシヒカリの優れた食味を引き出す最良の条件なのです。
-                    </p>
-                    <p class="font-medium text-ato-green border-l-2 border-ato-gold pl-4 py-1">
-                        「誰が、どこで、どう育てたか」がすべての袋に刻まれていること。それが阿東ブランドの絶対的な基準です。
-                    </p>
-                </div>
-                <!-- 右側：美しいイメージ挿し絵カード -->
-                <div class="relative group">
-                    <div class="absolute -inset-2 bg-ato-gold/20 rounded-lg blur-sm transform rotate-1"></div>
-                    <div class="relative bg-white p-3 border border-ato-green/10 luxury-shadow space-y-4">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1000&auto=format&fit=crop" alt="山々から流れ落ちる清流" class="w-full h-64 object-cover">
-                        <div class="p-4 space-y-2 font-serif">
-                            <h3 class="font-bold text-ato-green text-base">三つの約束</h3>
-                            <ul class="space-y-2 text-xs font-sans text-gray-600">
-                                <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>完全産地直結：</strong>嘉年の生産者から直接仕入れた、顔の見える関係。</li>
-                                <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>適正価格の坚持：</strong>安売りをせず、生産者の誇りを守ります。</li>
-                                <li class="flex items-start"><span class="text-ato-gold mr-2 font-bold">―</span><strong>純粋な素材：</strong>自然の力をそのまま製粉したまっすぐな米粉。</li>
-                            </ul>
-                        </div>
+            <!-- 先行登録用フォームUI -->
+            <form class="space-y-6 text-ato-green">
+                <div class="bg-white p-8 space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                        <input type="email" class="w-full p-3 border border-gray-300" required>
                     </div>
+                    <div>
+                        <label class="block text-xs font-bold mb-2">一番使いたい用途 <span class="text-red-500">*</span></label>
+                        <input type="text" class="w-full p-3 border border-gray-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold mb-2">希望容量 <span class="text-red-500">*</span></label>
+                        <select class="w-full p-3 border border-gray-300" required>
+                            <option>300g</option><option>500g</option><option>1kg</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold mb-2">購入頻度 <span class="text-red-500">*</span></label>
+                        <select class="w-full p-3 border border-gray-300" required>
+                            <option>都度購入</option><option>定期便（月1回）</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold mb-2">500gの価格感 <span class="text-red-500">*</span></label>
+                        <input type="text" class="w-full p-3 border border-gray-300" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold mb-2">欲しいと思った理由（定性データ） <span class="text-red-500">*</span></label>
+                        <textarea class="w-full p-3 border border-gray-300 h-24" placeholder="ご自由にお書きください" required></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-ato-gold text-white py-4 font-bold tracking-widest text-sm hover:bg-yellow-600 transition">
+                        仮注文として登録する (PRE_ORDER)
+                    </button>
+                    <p class="text-[10px] text-gray-500 text-center">※氏名等の個人情報は取得いたしません。</p>
                 </div>
-            </div>
+            </form>
         </div>
     </section>
 
-    <!-- 商品ラインナップの思想（写真付きカード） -->
-    <section class="py-28 px-6 max-w-5xl mx-auto">
-        <div class="text-center space-y-4 mb-16">
-            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase font-semibold">Products Philosophy</span>
-            <h2 class="text-2xl md:text-4xl font-bold text-ato-green tracking-wide">嘉年の恵みを、日常の食卓へ</h2>
-            <div class="w-12 h-[1px] bg-ato-gold mx-auto"></div>
-            <p class="font-sans text-xs text-gray-600 tracking-wider">白米・玄米の素材そのものの魅力を活かした、純度100%の米粉ラインナップ。</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-10 font-sans">
-            <!-- 白米カード -->
-            <div class="bg-ato-card border border-ato-green/10 luxury-shadow overflow-hidden group flex flex-col justify-between">
-                <div class="overflow-hidden h-56">
-                    <img src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?q=80&w=800&auto=format&fit=crop" alt="秋の黄金稲穂が波打つ棚田" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-8 space-y-3">
-                    <span class="text-xs text-ato-gold tracking-[0.2em] font-en font-bold uppercase">Standard Line</span>
-                    <h3 class="font-serif text-2xl font-bold text-ato-green">阿東米粉（白米）</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed font-light">
-                        嘉年産コシヒカリをきめ細やかに製粉。パン、お菓子、毎日の料理のつなぎまで、しっとりとした上品な仕上がりをもたらす万能素材です。
-                    </p>
-                </div>
+    <!-- 16. BtoB相談 -->
+    <section id="section-16" class="py-24 px-4 bg-white">
+        <div class="max-w-2xl mx-auto">
+             <div class="text-center mb-10">
+                <span class="section-title">For Business</span>
+                <h2 class="font-serif text-2xl font-bold text-ato-green">事業者様向け ご相談フォーム</h2>
             </div>
-            <!-- 玄米カード -->
-            <div class="bg-ato-card border border-ato-green/10 luxury-shadow overflow-hidden group flex flex-col justify-between">
-                <div class="overflow-hidden h-56">
-                    <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="初夏、青々とした稲が育つ中山間地の棚田" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                </div>
-                <div class="p-8 space-y-3">
-                    <span class="text-xs text-ato-gold tracking-[0.2em] font-en font-bold uppercase">Health Line</span>
-                    <h3 class="font-serif text-2xl font-bold text-ato-green">阿東米粉（玄米）</h3>
-                    <p class="text-xs text-gray-600 leading-relaxed font-light">
-                        玄米由来の豊かなミネラルと香ばしい風味をそのまま残しました。健康志向のインナーケアや、香ばしさを活かした焼き菓子・麺類に最適です。
-                    </p>
-                </div>
-            </div>
+            <form class="space-y-6">
+                 <div class="space-y-4 text-sm">
+                    <input type="text" placeholder="事業者名・店舗名" class="w-full p-3 border border-gray-300">
+                    <input type="text" placeholder="業種（例：パン屋、飲食店）" class="w-full p-3 border border-gray-300">
+                    <input type="text" placeholder="想定される用途・必要数量" class="w-full p-3 border border-gray-300">
+                    <textarea placeholder="現在の米粉・粉原料で困っていること（※重要）" class="w-full p-3 border border-gray-300 h-24"></textarea>
+                    <input type="email" placeholder="ご連絡先メールアドレス" class="w-full p-3 border border-gray-300">
+                    <button type="button" class="w-full bg-ato-green text-white py-4 font-bold tracking-widest text-sm hover:bg-ato-deep transition">
+                        BtoB相談を送信する
+                    </button>
+                 </div>
+            </form>
         </div>
     </section>
 
-    <!-- Googleフォーム 埋め込みセクション群 -->
-    <section id="forms" class="py-28 px-6 bg-gradient-to-b from-[#F5F0E8] to-[#EAE3D5] border-t border-ato-green/10 space-y-20">
-        
-        <div class="text-center space-y-4 max-w-2xl mx-auto">
-            <span class="text-ato-gold text-xs tracking-[0.3em] font-sans uppercase font-semibold">Application & Feedback</span>
-            <h2 class="text-2xl md:text-4xl font-bold text-ato-green tracking-wide">各種ご案内・受付フォーム</h2>
-            <div class="w-12 h-[1px] bg-ato-gold mx-auto"></div>
-            <p class="font-sans text-xs text-gray-600 leading-relaxed">
-                創業期メンバーとしての登録や、商品開発に向けたアンケートをこちらから受け付けております。お気軽にご入力ください。
-            </p>
-        </div>
-
-        <!-- 1. 先行登録フォーム -->
-        <div id="form-register" class="max-w-4xl mx-auto bg-ato-card p-8 md:p-14 border border-ato-green/15 luxury-shadow space-y-6">
-            <div class="flex items-center space-x-3 border-b border-ato-green/10 pb-4">
-                <span class="w-2 h-2 bg-ato-gold rounded-full"></span>
-                <h3 class="text-xl md:text-2xl font-bold text-ato-green">先行登録フォーム</h3>
-            </div>
-            <p class="font-sans text-xs md:text-sm text-gray-600 font-light">
-                創業期プロジェクトの先行登録はこちらからお願いいたします。
-            </p>
-            <div class="iframe-wrapper flex justify-center pt-2">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdowtleeg_AEBd7fOwgiRpOZF41QzDW51-roD6kAUm6MCTnFA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-            </div>
-        </div>
-
-        <!-- 2. 先行受付フォーム -->
-        <div id="form-reception" class="max-w-4xl mx-auto bg-ato-card p-8 md:p-14 border border-ato-green/15 luxury-shadow space-y-6">
-            <div class="flex items-center space-x-3 border-b border-ato-green/10 pb-4">
-                <span class="w-2 h-2 bg-ato-gold rounded-full"></span>
-                <h3 class="text-xl md:text-2xl font-bold text-ato-green">先行受付フォーム</h3>
-            </div>
-            <p class="font-sans text-xs md:text-sm text-gray-600 font-light">
-                商品のお取り扱いや優先案内に関する先行受付はこちらからどうぞ。
-            </p>
-            <div class="iframe-wrapper flex justify-center pt-2">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfGT-aI5gr7m7WOw0G4f_zPGQ9VwkM9bT4pRZJmzU1X6CUUMQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-            </div>
-        </div>
-
-        <!-- 3. 商品開発アンケートフォーム -->
-        <div id="form-survey" class="max-w-4xl mx-auto bg-ato-card p-8 md:p-14 border border-ato-green/15 luxury-shadow space-y-6">
-            <div class="flex items-center space-x-3 border-b border-ato-green/10 pb-4">
-                <span class="w-2 h-2 bg-ato-gold rounded-full"></span>
-                <h3 class="text-xl md:text-2xl font-bold text-ato-green">商品開発アンケートフォーム</h3>
-            </div>
-            <p class="font-sans text-xs md:text-sm text-gray-600 font-light">
-                今後のより良い商品づくりの参考に、皆様の率直なご意見・ご要望をお聞かせください。
-            </p>
-            <div class="iframe-wrapper flex justify-center pt-2">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSde3u4SxDSePm8K3fkm-uPq11pnRwLkRAjBmdKg2zl6pehC5A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- フッター -->
-    <footer class="bg-ato-black text-ato-ecru py-16 text-center font-sans text-xs space-y-4">
-        <p class="font-serif text-sm tracking-widest text-ato-gold">米こや 華雪</p>
-        <p class="text-gray-400 font-light">山口県山口市阿東・嘉年地域</p>
-        <div class="pt-6 border-t border-gray-800 text-gray-500 text-[10px]">
-            &copy; 2026 ATO KANE BRAND. All rights reserved.
+    <!-- 22. 最終CTA / Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center text-xs space-y-6">
+        <h2 class="font-serif text-lg text-white">米こや 華雪｜峰の息吹</h2>
+        <p>「嘉年の米に、新しい価値を。」</p>
+        <div class="pt-6 border-t border-gray-800">
+            &copy; 2026 Komekoya Hanayuki. All rights reserved.
         </div>
     </footer>
 
